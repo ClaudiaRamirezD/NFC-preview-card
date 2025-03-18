@@ -32,7 +32,7 @@ body {
 }
 
 .card .main-img {
-    position: relative;
+    position: relative; /* Contenedor relativo para el overlay */
 }
 
 .card .main-img div {
@@ -42,22 +42,18 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 255, 255, 0.5); /* Color cyan con 50% de opacidad */
     width: 100%;
     height: 100%;
-    z-index: 100;
-    transition: background-color 0.3s ease-in-out;
+    background-color: transparent; /* 🔹 Inicialmente transparente */
     border-radius: 1rem;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-.card .main-img div:hover {
-    background-color: rgba(0, 255, 255, 0.5); /* Se mantiene la opacidad del fondo */
-    cursor: pointer;
-}
-
-.card .main-img div img {
-    opacity: 1; /* Imagen completamente visible */
-    z-index: 200;
+.card .main-img:hover div {
+    opacity: 1; /* 🔹 Aparece al hacer hover */
+    background-color: rgba(0, 255, 255, 0.5); /* 🔹 Ahora sí se ve el cyan */
 }
 
 
