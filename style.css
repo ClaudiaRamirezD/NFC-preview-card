@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --fw-light: 300;
+    --fw-medium: 400;
+    --fw-bold: 600;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    font-size: 1.125rem;
+    background-color: var(--main-bg);
+}
+
+.card {
+    background-color: var(--card-bg);
+    margin: 5.68rem 2.18rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 2rem ;
+    color: var(--soft-blue);
+}
+
+.card__img {
+    border-radius: 1rem;
+}
+
+.card .main-img {
+    position: relative;
+}
+
+.card .main-img div {
+    position: absolute;
+    top: 0;
+    background-color: var(--cyan);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 1rem;
+}
+
+.card .main-img div:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+
+.card .main-img div img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    z-index: 200;
+}
+
+.card__title{
+    color: var(--white);
+    padding-block: 2.7rem;
+    font-size: 1.5rem;
+    font-weight: var(--fw-medium);
+}
+
+.card__title:hover, .card__creator-name:hover{
+    cursor: pointer;
+    color: var(--cyan);
+}
+
+.card__description {
+    font-weight: var(--fw-medium);
+    opacity: .7;
+}
+
+.card__info{
+    padding-block: 2.7rem;
+}
+
+.card__info-item {
+    display: flex;
+    gap: 0.5rem; /* Add space between icon and text */
+    align-items: center
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2.7rem;
+}
+
+
+ul li:first-child{
+    color: var(--cyan);
+}
+
+.card__attribution{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+}
+
+.card__attribution__avatar{
+    width: 3.5rem;
+    border: 1.5px solid var(--white);
+    border-radius: 50%;
+}
+
+.card__attribution p {
+    opacity: .7;
+}
+
+.card__creator-name{
+    color: var(--white);
+}
+
+
+footer {
+    color: var(--soft-blue);
+    margin-bottom: 2rem;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
