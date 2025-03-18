@@ -16,6 +16,10 @@ body {
     font-family: "Outfit", sans-serif;
     font-size: 1.125rem;
     background-color: var(--main-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .card {
@@ -44,7 +48,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: transparent; /* 🔹 Inicialmente transparente */
+    background-color: transparent; 
     border-radius: 1rem;
     z-index: 100;
     opacity: 0;
@@ -52,8 +56,9 @@ body {
 }
 
 .card .main-img:hover div {
-    opacity: 1; /* 🔹 Aparece al hacer hover */
-    background-color: rgba(0, 255, 255, 0.5); /* 🔹 Ahora sí se ve el cyan */
+    opacity: 1; 
+    background-color: rgba(0, 255, 255, 0.5);
+    cursor: pointer;
 }
 
 
@@ -125,3 +130,9 @@ footer {
 }
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media(min-width: 768px){
+    .card {
+        max-width: clamp(300px, 30%, 600px);
+    }
+}
