@@ -132,7 +132,7 @@ footer {
 .attribution a { color: hsl(228, 45%, 44%); }
 
 @media(min-width: 768px){
-    .card {
-        max-width: clamp(300px, 30%, 600px);
+    main {
+        max-width: clamp(500px, 30%, 600px);
     }
 }
